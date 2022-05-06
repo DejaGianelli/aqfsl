@@ -1,0 +1,10 @@
+#Backus–Naur form
+
+AQFSL ::= [<filter-spec>* ";"] [<sort-spec> ";"] [<order-spec> ";"]
+<filter-spec> ::= <name> "=" <filter-expression>
+<filter-expression> ::= <operator> ":" <name> ","
+<operator> ::= ("lte" | "gte" | "gt" | "lt")
+<sort-spec> ::= "sort=" <name>
+<order-spec> ::= "order=" <order>
+<order> ::= "asc" | "desc"
+<name> ::= \w+
